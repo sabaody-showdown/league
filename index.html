@@ -69,17 +69,26 @@
 
     .standings-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 20px;
     }
 
     .fixtures-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 20px;
     }
 
     .standings-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-light-blue);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .fixtures-card {
       background: var(--card-bg);
       border: 1px solid var(--accent-light-blue);
       border-radius: 8px;
