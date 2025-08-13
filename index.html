@@ -6,86 +6,112 @@
   <meta name="description" content="Sabaody Showdown - One Piece TCG Competitive League">
   <title>Sabaody Showdown League</title>
   <style>
+    /* Color Palette */
+    :root {
+      --bg-light: #eef3f7; /* pale blue/white background */
+      --text-dark: #0f1a2b; /* deep navy */
+      --accent-blue: #2a4d69; /* muted navy accent */
+      --accent-light-blue: #4f81a8; /* soft accent from banner */
+      --card-bg: #ffffff; /* white for content blocks */
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fafafa;
-      color: #222;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
       line-height: 1.6;
     }
+
     header {
-      background-color: #004080;
+      background-color: var(--bg-light);
       padding: 20px;
       text-align: center;
-      color: white;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+      color: var(--text-dark);
     }
+
     nav a {
-      color: #ffcc00;
+      color: var(--accent-blue);
       margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
+
+    nav a:hover {
+      color: var(--accent-light-blue);
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
     section {
       padding: 30px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     h2 {
-      color: #004080;
-      border-bottom: 2px solid #004080;
+      color: var(--accent-blue);
+      border-bottom: 2px solid var(--accent-light-blue);
       display: inline-block;
       margin-bottom: 15px;
     }
-    .division-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .division-card {
-      background: #ffffff;
-      border: 2px solid #004080;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      font-weight: bold;
-    }
+
     .standings-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .standings-card {
-      background: #ffffff;
-      border: 2px solid #004080;
-      border-radius: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--accent-light-blue);
+      border-radius: 8px;
       padding: 10px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     .standings-card img {
       width: 100%;
-      border-radius: 6px;
+      border-radius: 4px;
     }
+
     footer {
-      background-color: #004080;
-      color: white;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
       margin-top: 40px;
+      border-top: 1px solid var(--accent-light-blue);
+    }
+
+    a {
+      color: var(--accent-blue);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sabaody Showdown League</h1>
+
+  <!-- Banner Image -->
+  <img class="banner" src="https://yt3.googleusercontent.com/tX5MpHelXlSL1IHpGQn1EM0waWz9NQcz7cMXLK3UA4n3W5kxszRWETRnj8cg6DMaWKll1Ye1m_0=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="Sabaody Showdown Banner">
+    <h1>Sabaody Showdown</h1>
     <nav>
       <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>
-      <a href="https://www.youtube.com/@sabaodyshowdown" target="_blank">YouTube</a>
+      <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank">YouTube</a>
+      <a href="https://x.com/sabaodyshowdown" target="_blank">Twitter</a>
     </nav>
   </header>
 
@@ -93,7 +119,7 @@
     <h2>About Us</h2>
     <p>
       Welcome to the <strong>Sabaody Showdown</strong> — a competitive One Piece Trading Card Game league
-      featuring some of the best players in the scene. We host three matches a week,
+      featuring some of the best players in the european scene. We host nine matches a week,
       streamed live on Twitch and archived on YouTube with top-tier commentary.
     </p>
   </section>
@@ -102,25 +128,15 @@
     <h2>League Format</h2>
     <p>
       This season features <strong>4 divisions of 8 players</strong> each. Players face off in weekly matches,
-      vying for a spot in the championship playoffs. Expect high-level plays, deck innovation, and 
-      thrilling matchups every week.
+      vying for a spot in the upper echelons. They also win a sealed box, and the top 2 players in each division swap places
+      with the two that placed lower on the division immediatley higher
     </p>
-  </section>
-
-  <section>
-    <h2>Divisions</h2>
-    <div class="division-grid">
-      <div class="division-card">Straw Hat Division</div>
-      <div class="division-card">Whitebeard Division</div>
-      <div class="division-card">Blackbeard Division</div>
-      <div class="division-card">Red-Haired Division</div>
-    </div>
   </section>
 
   <section>
     <h2>Watch Live</h2>
     <p>
-      Catch our streams every <strong>Tuesday, Thursday, and Saturday</strong> on 
+      Catch our streams every <strong>Thursday, Friday, and Sunday</strong> on 
       <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>.
       Missed a match? Watch the VODs on our 
       <a href="https://www.youtube.com/@sabaodyshowdown" target="_blank">YouTube channel</a>.
