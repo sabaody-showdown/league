@@ -81,8 +81,7 @@
       margin: auto;
     }
 
-    /* Force a max of 2 cards per row */
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       .profiles-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -95,12 +94,56 @@
       text-align: center;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      cursor: pointer;
     }
 
     .profile-card img {
       width: 100%;
       border-radius: 6px;
       object-fit: cover;
+      transition: transform 0.2s;
+    }
+
+    .profile-card img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal overlay, hidden by default */
+    .modal {
+      display: none;               /* hidden initially */
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .modal-content {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .close:hover {
+      color: #bbb;
     }
   </style>
 </head>
@@ -108,17 +151,15 @@
   <header>
     <img class="banner" src="https://github.com/sabaody-showdown/league/blob/main/Graphics/Banner.jpg?raw=true" alt="Sabaody Showdown Banner">
     <h1>Player Profiles</h1>
-    <p></p>
     <nav>
       <a href="https://sabaody-showdown.github.io/league/">Homepage</a>
-      <a href="https://sabaody-showdown.github.io/league/Profiles/" target="_blank">Player Profiles</a>
+      <a href="profiles.html">Player Profiles</a>
       <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>
       <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank">YouTube</a>
       <a href="https://x.com/sabaodyshowdown" target="_blank">Twitter</a>
     </nav>
   </header>
 
-  <!-- Division Tabs -->
   <div class="tabs">
     <button class="tab-button active" data-division="Division 1">Division 1</button>
     <button class="tab-button" data-division="Division 2">Division 2</button>
@@ -126,15 +167,23 @@
     <button class="tab-button" data-division="Division 4">Division 4</button>
   </div>
 
-  <!-- Profiles Container -->
   <div id="profiles-container" class="profiles-grid"></div>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Profile Image">
+  </div>
 
   <script>
     const divisions = ["Division 1", "Division 2", "Division 3", "Division 4"];
     const profilesContainer = document.getElementById("profiles-container");
+    const playersPerDivision = 8; // adjust if needed
 
-    // Set number of players per division
-    const playersPerDivision = 8; // change this if needed
+    // Modal elements
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
 
     function loadDivision(division) {
       profilesContainer.innerHTML = "";
@@ -143,13 +192,23 @@
         card.className = "profile-card";
 
         const img = document.createElement("img");
-        img.src = `${division}/Player${i}.jpg`;
+        img.src = `./${division}/Player${i}.jpg`; // relative path inside Profiles folder
         img.alt = `${division} Player ${i}`;
+
+        img.onclick = () => openModal(img.src);
 
         card.appendChild(img);
         profilesContainer.appendChild(card);
       }
     }
+
+    function openModal(src) {
+      modal.style.display = "flex"; // show modal as flex
+      modalImg.src = src;
+    }
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
     // Tab switching
     document.querySelectorAll(".tab-button").forEach(btn => {
