@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabaody Showdown – Player Profiles</title>
+  <style>
+    :root {
+      --bg-light: #eef3f7;
+      --text-dark: #0f1a2b;
+      --accent-blue: #2a4d69;
+      --accent-light-blue: #4f81a8;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--bg-light);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--text-dark);
+    }
+
+    nav a {
+      color: var(--accent-blue);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent-light-blue);
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 10px;
+    }
+
+    .tab-button {
+      background: var(--accent-blue);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .tab-button.active {
+      background: var(--accent-light-blue);
+    }
+
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-light-blue);
+      border-radius: 8px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .profile-card img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="banner" src="https://github.com/sabaody-showdown/league/blob/main/Graphics/Banner.jpg?raw=true" alt="Sabaody Showdown Banner">
+    <h1>Player Profiles</h1>
+    <p></p>
+    <nav>
+      <a href="https://sabaody-showdown.github.io/league/" target="_blank">Homepage</a>
+      <a href="https://sabaody-showdown.github.io/league//profiles" target="_blank">Player Profiles</a>
+      <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>
+      <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank">YouTube</a>
+      <a href="https://x.com/sabaodyshowdown" target="_blank">Twitter</a>
+    </nav>
+  </header>
+
+  <!-- Division Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" data-division="Division 1">Division 1</button>
+    <button class="tab-button" data-division="Division 2">Division 2</button>
+    <button class="tab-button" data-division="Division 3">Division 3</button>
+    <button class="tab-button" data-division="Division 4">Division 4</button>
+  </div>
+
+  <!-- Profiles Container -->
+  <div id="profiles-container" class="profiles-grid"></div>
+
+  <script>
+    const divisions = ["Division 1", "Division 2", "Division 3", "Division 4"];
+    const profilesContainer = document.getElementById("profiles-container");
+
+    // Set number of players per division
+    const playersPerDivision = 8; // change this if needed
+
+    function loadDivision(division) {
+      profilesContainer.innerHTML = "";
+      for (let i = 1; i <= playersPerDivision; i++) {
+        const card = document.createElement("div");
+        card.className = "profile-card";
+
+        const img = document.createElement("img");
+        img.src = `Profiles/${division}/player${i}.jpg`;
+        img.alt = `${division} Player ${i}`;
+
+        card.appendChild(img);
+        profilesContainer.appendChild(card);
+      }
+    }
+
+    // Tab switching
+    document.querySelectorAll(".tab-button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        loadDivision(btn.dataset.division);
+      });
+    });
+
+    // Load Division 1 by default
+    loadDivision(divisions[0]);
+  </script>
+</body>
+</html>
