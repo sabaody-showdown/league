@@ -74,11 +74,18 @@
 
     .profiles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
       padding: 20px;
       max-width: 1000px;
       margin: auto;
+    }
+
+    /* Force a max of 4 cards per row */
+    @media (min-width: 800px) {
+      .profiles-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     .profile-card {
@@ -94,6 +101,7 @@
       width: 100%;
       border-radius: 6px;
       object-fit: cover;
+    }object-fit: cover;
     }
   </style>
 </head>
