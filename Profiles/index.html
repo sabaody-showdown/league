@@ -95,12 +95,49 @@
       text-align: center;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      cursor: pointer;
     }
 
     .profile-card img {
       width: 100%;
       border-radius: 6px;
       object-fit: cover;
+      transition: transform 0.2s;
+    }
+
+    .profile-card img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -108,10 +145,9 @@
   <header>
     <img class="banner" src="https://github.com/sabaody-showdown/league/blob/main/Graphics/Banner.jpg?raw=true" alt="Sabaody Showdown Banner">
     <h1>Player Profiles</h1>
-    <p></p>
     <nav>
       <a href="https://sabaody-showdown.github.io/league/">Homepage</a>
-      <a href="https://sabaody-showdown.github.io/league/Profiles/" target="_blank">Player Profiles</a>
+      <a href="https://sabaody-showdown.github.io/league/profiles.html">Player Profiles</a>
       <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>
       <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank">YouTube</a>
       <a href="https://x.com/sabaodyshowdown" target="_blank">Twitter</a>
@@ -129,12 +165,21 @@
   <!-- Profiles Container -->
   <div id="profiles-container" class="profiles-grid"></div>
 
+  <!-- Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Profile Image">
+  </div>
+
   <script>
     const divisions = ["Division 1", "Division 2", "Division 3", "Division 4"];
     const profilesContainer = document.getElementById("profiles-container");
-
-    // Set number of players per division
     const playersPerDivision = 8; // change this if needed
+
+    // Modal elements
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
 
     function loadDivision(division) {
       profilesContainer.innerHTML = "";
@@ -146,22 +191,14 @@
         img.src = `${division}/Player${i}.jpg`;
         img.alt = `${division} Player ${i}`;
 
+        // Open modal on click
+        img.onclick = () => openModal(img.src);
+
         card.appendChild(img);
         profilesContainer.appendChild(card);
       }
     }
 
-    // Tab switching
-    document.querySelectorAll(".tab-button").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        loadDivision(btn.dataset.division);
-      });
-    });
-
-    // Load Division 1 by default
-    loadDivision(divisions[0]);
-  </script>
-</body>
-</html>
+    function openModal(src) {
+      modal.style.display = "block";
+      modalImg.src = src;
