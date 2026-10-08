@@ -2,7 +2,7 @@
 
 ## **General Rocks Gameplan**
 
-Regardless of the matchup, your goal is to develop on a curve. It is important to prioritise your curve over plays that might look higher value. Rocks is a strong deck, with a huge drawback, so if you find yourself low on Shiki/Newgate/Gloriosa, you will die with heaps of cards in hand.
+Regardless of the matchup, your goal is to develop on a curve. It is important to prioritise your curve over plays that might look higher value. Rocks is a strong deck, with a huge drawback, so if you find yourself low on Shiki/Newgate/Linlin, you will die with heaps of cards in hand.
 
 **Cards usage** 
 
@@ -32,11 +32,13 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 **Rocks pirates** follows the same pattern, in most games, it’s a natural 2k counter, but in other matchups just completely turns the tempo around. Being able to deal with 6 cost bodies sounds meager compared to Gloriosa, but when facing Kaido or RG Luffy, forcing them to waste a turn re-playing King or SEC Luffy can buy us enough time to push them out of the game, especially if we can repeat the play with a sizeable board at the ready.
 
-Secret Rocks is our boss monster. It’s a huge body that also lets us go super wide. Always plan for him when you defend (or let go) of your board. Letting us play 2 more bodies with a total of 9 cost is great, but it means we cannot have more than 3 real bodies by the time we play him, or instead we will waste resources.  
+**Secret Rocks** is our boss monster. It’s a huge body that also lets us go super wide. Always plan for him when you defend (or let go) of your board. Letting us play 2 more bodies with a total of 9 cost is great, but it means we cannot have more than 3 real bodies by the time we play him, or instead we will waste resources.
 
 **Jinbe** is our best option for non Rocks pirates. It’s a huge body with rush that nets us card advantage and also pushes a 7 cost or less back to our opponent’s hand. Can either be the best finisher, or a backbreaking tempo play, when contesting the board.
 
 ### **Ideal curve going second**
+
+**3 DON:** Kyo to cycle a card and set up removal protection
 
 **4 DON:** Any 4 cost character: Captain John, Wang Zhi or Gloriosa depending on the match up
 
@@ -72,7 +74,7 @@ Not many of us will get the chance to play a relevant tournament before the Miha
 
 ![][image1]
 
-The flex slots for the list are Streusen and Buckin, but you should not run less than 4 total. I prefer having more 1k counters available, so Stussy took priority in my lists. You can also cut Captain John down to 3 copies, or get rid of the Usopp event, but the combo does come up relatively often in the current meta.
+The flex slots for the list are Streusen and Buckin, but you should not run less than 4 total. I prefer having more 1k counters available, so Buckin took priority in my lists. You can also cut Captain John down to 3 copies, or get rid of the Usopp event, but the combo does come up relatively often in the current meta.
 
 We are playing the full 4 copies of Captain John because the endgame does rely heavily on seeing him, and early game, we might need to either trash him for leader, or let him go after it's been rested or has attacked. It is also very useful if we can develop him on 4 DON vs either Robin or Mihawk, to grant us 1k extra counter for each swing, or force them to waste the turn by committing to an 8 swing.
 
