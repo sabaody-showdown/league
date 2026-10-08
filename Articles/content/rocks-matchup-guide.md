@@ -82,9 +82,9 @@ Only running one Streusen because it effectively compacts the deck, so there is 
 
 Before we talk about why there is a single Usopp event in the list, we need to go over the maths of it. It looks like 1 out of 50 cards is a very low chance to hit it for leader ability, but considering an average of 8 turns before the end of the game, this compounds greatly. With some concessions to simplify the calculation, the probability of whiffing comes down to the following, based on the number of non rocks cards:
 
-\- 1 Non rocks card: We will whiff 1 in 5 games  
-\- 2 Non rocks card: We will whiff 1 in 3 games  
-\- 4 Non rocks card: We will whiff 2 in 5 games
+* 1 Non rocks card: We will whiff 1 in 5 games
+* 2 Non rocks card: We will whiff 1 in 3 games
+* 4 Non rocks card: We will whiff 2 in 5 games
 
 The cost of a whiff is effectively reducing hand size by one, rather than increasing it by one, when swinging with Leader, and while it might not always cost us the game, it will be critical to how we need to approach the follow up turns, and if the timing is early, will be devastating. 
 
