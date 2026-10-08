@@ -110,7 +110,7 @@ As you can see, plenty of options for the decklist have opened up, and as the fo
 
 - **Streusen** is the easiest card to cut, he helps a lot, but never plays a defining role. Just keep in mind that when cutting him, you might also want to need to up the count of your 2 ofs.   
 - **Buckin** is a necessary evil, because it’s the only 1k we are allowed to run without risking our leader ability hit rate. Run 2 to 4 copies. If the list feels too bricky, just up the count.
-- **WanZhi** is not on the list right now, but if Enel becomes more prominent, it might need to make a comeback  
+- **Wang Zhi** is not on the list right now, but if Enel becomes more prominent, it might need to make a comeback
 - **Jinbe** is mostly here for Mirror and the Rosinante matchup, but if the latter is not a key part of the meta, we can probably get away with not running him. 
 
 As for what other cards we could be running, depending on the meta, right now there are two main suspects:
