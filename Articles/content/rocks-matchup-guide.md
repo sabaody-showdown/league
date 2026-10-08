@@ -18,7 +18,7 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 **Newgate** is the backbone of the deck when going second. He turns any card into a 3k counter for swings at our leader, but can also push aggressive lines if our opponent takes the early lives greedily. He also completely overloads your lethal options, and if there are 2 on board, you can easily push multiple 11 swings in a single turn.
 
-**Captain Jon** is a very reliable way to protect our board. Against decks with the ability to reduce power, he acts as a 6k baseline, making sure our key bodies can survive the turn. Of course it’s half the combo with the Usopp event, but this will be less important once Mihawk ban comes into effect, as we will likely abandon the EB02 Event. 
+**Captain John** is a very reliable way to protect our board. Against decks with the ability to reduce power, he acts as a 6k baseline, making sure our key bodies can survive the turn. Of course it’s half the combo with the Usopp event, but this will be less important once Mihawk ban comes into effect, as we will likely abandon the EB02 Event.
 
 **Kyo** is just premium removal protection on a body that replaces itself. It’s pretty much pointless on matchups without access to removal, but it will still let us push through some easy swings, or help dig deeper in turns one and two. 
 
