@@ -1,24 +1,5 @@
 # **Rocks Matchup Guide \- By Tinnoy & Gonzo**
 
-## **Index**
-
-1. **General Rocks gameplan**  
-2. **Cards usage**  
-3. **Ideal curves**  
-4. **Decklist before and after banlist**  
-5. **Matchups**  
-* **Mihawk**  
-* **Robin**  
-* **Elbaph Sabo**  
-* **Mirror**  
-* **Bluffy**  
-* **TBD**  
-6. **When to trash X card**  
-7. **When to use X effect**  
-8. **Last words**
-
-## 
-
 ## **General Rocks Gameplan**
 
 Regardless of the matchup, your goal is to develop on a curve. It is important to prioritise your curve over plays that might look higher value. Rocks is a strong deck, with a huge drawback, so if you find yourself low on Shiki/Newgate/Gloriosa, you will die with heaps of cards in hand.
@@ -55,7 +36,7 @@ Secret Rocks is our boss monster. It’s a huge body that also lets us go super 
 
 **Jinbe** is our best option for non Rocks pirates. It’s a huge body with rush that nets us card advantage and also pushes a 7 cost or less back to our opponent’s hand. Can either be the best finisher, or a backbreaking tempo play, when contesting the board.
 
-**Ideal curve going going second**
+### **Ideal curve going going second**
 
 **4 DON:** Any 4 cost character: Captain John, Wang Zhi or Gloriosa depending on the match up
 
@@ -67,7 +48,7 @@ Secret Rocks is our boss monster. It’s a huge body that also lets us go super 
 
 There are other interesting combinations to play out with rocks, such as Linlin \+ Gloriosa, but in general, you want to prioritise newgate and shiki above all else. 
 
-#### **Ideal curve going first**
+####**Ideal curve going first**
 
 **3 DON:** Kyo \+ Swing 6k with Leader
 
@@ -269,8 +250,9 @@ From this point onwards, the goal is to drain their resources, and set up a race
 
 As extra advice here, there might be some tough choices to make with Kyo, once they play out Loki. Normally, it’s okay to let him go, and only defend him if you intend to play a 4 cost next turn, and you cannot afford for it to be loki’d. If they spend their mid game playing Gum-Gum Kong gun, they are giving us more time for the Secret Rocks plays, and they cannot kill Shiki, so no need to keep Kyo around. 
 
-## **Elbaph Luffy matchup \- WIP**
+## **Elbaph Luffy matchup
 
+> Note: We are still working on this section, expect an update next week
    
 This is likely the matchup where it matters the most to go second. Their curve is very natural on second, and they can easily drop multiple Lokis to break the race’s balance, while also making Shiki's power reduction a lot less relevant. 
 
@@ -321,7 +303,7 @@ As you will probably know, this deck excels at setting up tall bodies, and by th
 
 Missing your curve is a huge problem on the mirror match, and can get severely punished fairly quickly. Every resource counts, and not getting them at the right time will be pivotal. It’s both important that you see your pieces, and that you identify when your opponent misses them, as this will give you information on what they’re missing, and also let you punish it and get closer to the win. 
 
-**Going first**
+### **Going first**
 
 The ideal hand you're looking for here is basically Kyo \+ Linlin. If running Streusen, he will help you get closer to those two, so value him highly .Of course a shiki to compliment them is great, but you should mulligan if you don’t see 2 out of the three, and some decent backup play for the turn you’re missing. 
 
@@ -335,7 +317,7 @@ During the game, knowing when to swing our characters is going to be the most aw
 
 Also, as said before, Stussy is an insane tool to stall the board on the late game, so be sure to accumulate them to leverage once the Shikis and Rocks are on board. 
 
-**Going second**
+### **Going second**
 
 For the mulligan here, we are looking for some slightly different pieces. The best possible hand is Kyo, 2x Gloriosa, Newgate and SEC Rocks, but this is obviously not an easy one to pull out of the blue. You will not have many windows for Streusen going second, so he is not a great replacement, at least for Kyo and Gloriosa. Keep hands that could let you go back to back gloriosas, and even though SEC is great to see early, you have time to find him, so value him lower than the rest. 
 
@@ -347,7 +329,7 @@ For the mulligan here, we are looking for some slightly different pieces. The be
 
 In the ideal scenario, your next turn you will have Rocks 2x shiki and Kyo. And here is where you have the tempo advantage. If they did not rest their characters at all, chances are you can get them down to either 1 or 0 here, and play Stussy to stun Newgate and either Shiki or Rocks. So you get a lethal window while they are forced to swing at your board, with two of their bodies stuck standing. If you push correctly, and have another Stussy, you should be able to extend this bad situation until you win the game. 
 
-**Key cards in the mirror**
+### **Key cards**
 
 Kyo serves as protection for your Linlins and blockers in the early game. But also excels late game to make sure you can safely set up your blockers. Try not to trash too many for counter or Leader ability. 
 
@@ -379,9 +361,10 @@ To illustrate the point, let’s look at a concrete example. We are swinging wit
 
 You guessed it\! Here we want to get rid of Linlin\! We will not have a good window to play her, since now Newgate is better, and next turn we want to drop Shiki. Right after that SEC Rocks is mandatory, and we have a very strong combo of Newgate \+ Stussy. But even gloriosa is a more flexible tool here, since she could come up from rocks or the turn immediately after. 
 
-**When to use Newgate and Shiki abilities for offense**
+### **When to use Newgate and Shiki abilities**
 
 Newgate let’s us give \+3k to our leader for a battle, either when he attacks or is attacked, but only once per turn. The defending is easy, if they swing 7, the answer will be yes unless we really want more resources. This part will apply identically to shiki. Just defend when it is efficient or when you need to leverage your bricks in hand, because you might not do so next turn.   
+
 Newgate on offense is a different story, we want to use it when the extra pressure to life will force a bad decision from our opponent, or when a swing at board trades 1 of our cards for 2 of theirs. And of course, when going for a lethal turn, leverage him properly. In the early game, ask yourself the next question: Do they want to take life? If they do, don’t buff the leader. This is super clear when they’re sitting at 4 life with 5 in hand, but will get a bit more complicated in most games, so just consider the fact you’re spending a card here, so it needs to be worth it. As a general rule, if taking the life or losing the character is something the opponent should avoid, push with newgate. 
 
 Shiki follows a similar pattern, but is more predictable, because they cannot bait you by taking life when they have plenty of counters. You know whether a character is important. If you need to remove it, pitch a card, if you’re okay with it surviving, feel free to take it slow, and use that same card to protect against the counterattack. It is tempting to always trash, but remember that even you have finite resources. 
