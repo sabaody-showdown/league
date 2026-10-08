@@ -172,7 +172,7 @@ Even though Robin does get some explosiveness from playing first, we just prefer
 
 **7 DON:** Develop Shiki. If they have a wide board, do not rest any of your characters, as you cannot defend over Sweet Generals. Only rest your board if you can guarantee shiki surviving the clap back.
 
-**9 DON:** Same idea as in 7 DON. Develop another Shiki/Newgate and keep your board standing if you cannot guarantee their survival. It is also an option to double gloriosa if you have enough targets on 5 cost or less. 
+**9 DON:** Same idea as in 7 DON. Develop another Shiki/Newgate and keep your board standing if you cannot guarantee their survival. It is also an option to double Gloriosa if you have enough targets on 5 cost or less.
 
 The best target for gloriosa is Oven, followed by 5c Smoothie, and then Pudding or Daifuku. 
 
@@ -224,7 +224,7 @@ Ground death is their best way to beat our captain John defensive line, but this
 
 They can also try and swing the tempo by killing our board with Gum-Gum Kong Gun. Of course Kyo is a key way to stop them from even trying, so keep one at the ready for turns when the Gun would disrupt the tempo.
 
-Their gameplan is to end the game before we stabilise, so when using Kaido, be sure to show them counter cards, to avoid giving them any info about our bricks in hand. .
+Their gameplan is to end the game before we stabilise, so when using Kaido, be sure to show them counter cards, to avoid giving them any info about our bricks in hand.
 
 ### **Going first**
 
