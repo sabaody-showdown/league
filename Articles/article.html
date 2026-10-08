@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Strategy article from Sabaody Showdown">
+  <title>Article - Sabaody Showdown</title>
+  <style>
+    :root {
+      --bg-light: #eef3f7;
+      --text-dark: #0f1a2b;
+      --accent-blue: #2a4d69;
+      --accent-light-blue: #4f81a8;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: var(--accent-blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    a:hover {
+      color: var(--accent-light-blue);
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .article-byline {
+      margin: 0 0 24px;
+      color: #43566a;
+    }
+
+    .article-content,
+    .table-of-contents {
+      padding: 24px;
+      border: 1px solid var(--accent-light-blue);
+      border-radius: 8px;
+      background: var(--card-bg);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .table-of-contents {
+      margin-bottom: 24px;
+    }
+
+    .table-of-contents h2,
+    .article-content h2,
+    .article-content h3,
+    .article-content h4 {
+      color: var(--accent-blue);
+    }
+
+    .table-of-contents h2 {
+      margin: 0;
+    }
+
+    .table-of-contents ul {
+      margin-bottom: 0;
+    }
+
+    .table-of-contents .toc-level-3 {
+      margin-left: 20px;
+    }
+
+    .table-of-contents .toc-level-4 {
+      margin-left: 40px;
+    }
+
+    .article-content h1,
+    .article-content h2,
+    .article-content h3,
+    .article-content h4 {
+      scroll-margin-top: 20px;
+      line-height: 1.35;
+    }
+
+    .article-content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+    }
+
+    .article-content li {
+      margin: 4px 0;
+    }
+
+    .article-content a,
+    .table-of-contents a,
+    .back-link {
+      color: var(--accent-blue);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 0 0 16px;
+      font-weight: bold;
+    }
+
+    .message.error {
+      color: #9b1c1c;
+    }
+
+    footer {
+      margin-top: 40px;
+      border-top: 1px solid var(--accent-light-blue);
+      padding: 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .article-content,
+      .table-of-contents {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="banner" src="../Graphics/Banner.jpg" alt="Sabaody Showdown Banner">
+    <h1 id="page-title">Article</h1>
+    <nav>
+      <a href="../">Homepage</a>
+      <a href="./">Articles</a>
+      <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank" rel="noopener noreferrer">Twitch</a>
+      <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://x.com/sabaodyshowdown" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </nav>
+  </header>
+
+  <main>
+    <a class="back-link" href="./">← All articles</a>
+    <p id="article-byline" class="article-byline"></p>
+    <nav id="table-of-contents" class="table-of-contents" aria-label="Article contents" hidden>
+      <h2>Contents</h2>
+      <ul id="table-of-contents-list"></ul>
+    </nav>
+    <article id="article-content" class="article-content" aria-live="polite"></article>
+  </main>
+
+  <footer>© 2025 Sabaody Showdown — One Piece TCG League</footer>
+
+  <script>
+    function safeUrl(value, allowDataImage = false) {
+      if (allowDataImage && /^data:image\/(?:png|jpeg|gif|webp);base64,[a-z\d+/]+=*$/i.test(value)) {
+        return value;
+      }
+
+      try {
+        const url = new URL(value, window.location.href);
+        if (["http:", "https:", "mailto:"].includes(url.protocol)) {
+          return value;
+        }
+      } catch {
+        return "";
+      }
+      return "";
+    }
+
+    function appendInline(parent, text, references) {
+      const tokens = /(!?)\[([^\]]*)\](?:\(([^)\s]+)(?:\s+"([^"]*)")?\)|\[([^\]]*)\])|(\*\*|__)(.+?)\6|(\*|_)(.+?)\8|`([^`]+)`|\\(.)/g;
+      let cursor = 0;
+      let match;
+
+      while ((match = tokens.exec(text))) {
+        parent.append(document.createTextNode(text.slice(cursor, match.index)));
+        if (match[1] !== undefined) {
+          const label = match[2];
+          const reference = (match[5] || label).toLowerCase();
+          const target = match[3] || references[reference];
+          const href = target && safeUrl(target);
+          if (match[1]) {
+            const imageSource = match[3] || references[(match[5] || label).toLowerCase()];
+            const src = imageSource && safeUrl(imageSource, true);
+            if (src) {
+              const image = document.createElement("img");
+              image.src = src;
+              image.alt = label;
+              parent.appendChild(image);
+            } else {
+              parent.append(document.createTextNode(label));
+            }
+          } else if (href) {
+            const link = document.createElement("a");
+            link.href = href;
+            link.textContent = label;
+            if (/^https?:/i.test(href)) {
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+            }
+            parent.appendChild(link);
+          } else {
+            parent.append(document.createTextNode(label));
+          }
+        } else if (match[6]) {
+          const strong = document.createElement("strong");
+          appendInline(strong, match[7], references);
+          parent.appendChild(strong);
+        } else if (match[8]) {
+          const emphasis = document.createElement("em");
+          appendInline(emphasis, match[9], references);
+          parent.appendChild(emphasis);
+        } else if (match[10]) {
+          const code = document.createElement("code");
+          code.textContent = match[10];
+          parent.appendChild(code);
+        } else {
+          parent.append(document.createTextNode(match[11]));
+        }
+        cursor = tokens.lastIndex;
+      }
+
+      parent.append(document.createTextNode(text.slice(cursor).replace(/\\([\\`*_{}\[\]()#+\-.!])/g, "$1")));
+    }
+
+    function plainText(markdown) {
+      return markdown
+        .replace(/!\[([^\]]*)\]\[[^\]]*\]/g, "$1")
+        .replace(/\[([^\]]*)\](?:\([^)]*\)|\[[^\]]*\])/g, "$1")
+        .replace(/\*\*|__|[*_`]/g, "")
+        .replace(/\\([\\`*_{}\[\]()#+\-.!])/g, "$1")
+        .trim();
+    }
+
+    function headingSlug(text, usedSlugs) {
+      const base = plainText(text)
+        .toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, "")
+        .trim()
+        .replace(/\s+/g, "-");
+      const count = usedSlugs.get(base) || 0;
+      usedSlugs.set(base, count + 1);
+      return count ? `${base}-${count}` : base;
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.replace(/\r\n?/g, "\n").split("\n");
+      const references = {};
+      const definition = /^\[([^\]]+)\]:\s*<([^>]+)>/;
+      lines.forEach(line => {
+        const match = line.match(definition);
+        if (match) references[match[1].toLowerCase()] = match[2];
+      });
+
+      const article = document.getElementById("article-content");
+      const contents = document.getElementById("table-of-contents");
+      const contentsList = document.getElementById("table-of-contents-list");
+      const usedSlugs = new Map();
+      const headingItems = [];
+      let index = 0;
+
+      while (index < lines.length) {
+        const line = lines[index];
+        if (!line.trim() || definition.test(line)) {
+          index += 1;
+          continue;
+        }
+
+        const heading = line.match(/^(#{1,6})\s+(.*)$/);
+        if (heading) {
+          const level = heading[1].length;
+          const title = heading[2].trim();
+          if (!title) {
+            index += 1;
+            continue;
+          }
+          const element = document.createElement(`h${level}`);
+          element.id = headingSlug(title, usedSlugs);
+          appendInline(element, title, references);
+          article.appendChild(element);
+          if (level >= 2 && level <= 4) {
+            headingItems.push({ title, id: element.id, level });
+          }
+          index += 1;
+          continue;
+        }
+
+        const listItem = line.match(/^(\s*)([-*+]|\d+\.)\s+(.+)$/);
+        if (listItem) {
+          const ordered = /^\d/.test(listItem[2]);
+          const list = document.createElement(ordered ? "ol" : "ul");
+          while (index < lines.length) {
+            const item = lines[index].match(/^(\s*)([-*+]|\d+\.)\s+(.+)$/);
+            if (!item || /^\d/.test(item[2]) !== ordered) break;
+            const listElement = document.createElement("li");
+            appendInline(listElement, item[3].trim(), references);
+            list.appendChild(listElement);
+            index += 1;
+          }
+          article.appendChild(list);
+          continue;
+        }
+
+        const paragraphLines = [];
+        while (index < lines.length && lines[index].trim() &&
+          !/^(#{1,6})\s+/.test(lines[index]) &&
+          !/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[index]) &&
+          !definition.test(lines[index])) {
+          paragraphLines.push(lines[index].trim());
+          index += 1;
+        }
+        const paragraph = document.createElement("p");
+        appendInline(paragraph, paragraphLines.join(" "), references);
+        article.appendChild(paragraph);
+      }
+
+      headingItems.forEach(item => {
+        const link = document.createElement("a");
+        link.href = `#${item.id}`;
+        appendInline(link, item.title, references);
+        const entry = document.createElement("li");
+        entry.className = `toc-level-${item.level}`;
+        entry.appendChild(link);
+        contentsList.appendChild(entry);
+      });
+      contents.hidden = headingItems.length === 0;
+      return article.querySelector("h1")?.textContent || "";
+    }
+
+    async function loadArticle() {
+      const articleElement = document.getElementById("article-content");
+      try {
+        const slug = new URLSearchParams(window.location.search).get("slug");
+        if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
+          throw new Error("An article slug is required.");
+        }
+
+        const listResponse = await fetch("./articles.json");
+        if (!listResponse.ok) {
+          throw new Error(`Unable to load the article list (${listResponse.status}).`);
+        }
+        const data = await listResponse.json();
+        if (!Array.isArray(data.articles)) {
+          throw new Error("Article data must contain an articles array.");
+        }
+
+        const article = data.articles.find(item => item.slug === slug);
+        if (!article) {
+          throw new Error(`No article is registered for "${slug}".`);
+        }
+
+        const markdownResponse = await fetch(`./content/${encodeURIComponent(slug)}.md`);
+        if (!markdownResponse.ok) {
+          throw new Error(`Unable to load the article (${markdownResponse.status}).`);
+        }
+        const markdown = await markdownResponse.text();
+        const title = renderMarkdown(markdown) || article.title;
+        document.getElementById("page-title").textContent = title;
+        document.getElementById("article-byline").textContent = `By ${article.author}`;
+        document.title = `${title} - Sabaody Showdown`;
+      } catch (error) {
+        console.error(error);
+        const message = document.createElement("p");
+        message.className = "message error";
+        message.textContent = "This article could not be loaded. Return to the article list and try again.";
+        articleElement.replaceChildren(message);
+      }
+    }
+
+    loadArticle();
+  </script>
+</body>
+</html>

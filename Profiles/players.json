@@ -1,0 +1,20 @@
+{
+  "players": [
+    {
+      "name": "Player 1",
+      "image": "./Division 1/Player1.jpg"
+    },
+    {
+      "name": "Player 2",
+      "image": "./Division 1/Player2.jpg"
+    },
+    {
+      "name": "Player 3",
+      "image": "./Division 1/Player3.jpg"
+    },
+    {
+      "name": "Player 4",
+      "image": "./Division 1/Player4.jpg"
+    }
+  ]
+}

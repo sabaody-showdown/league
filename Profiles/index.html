@@ -50,28 +50,6 @@
       object-fit: cover;
     }
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-      gap: 10px;
-    }
-
-    .tab-button {
-      background: var(--accent-blue);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: background 0.2s ease;
-    }
-
-    .tab-button.active {
-      background: var(--accent-light-blue);
-    }
-
     .profiles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -106,6 +84,17 @@
 
     .profile-card img:hover {
       transform: scale(1.05);
+    }
+
+    .profile-card h2 {
+      color: var(--accent-blue);
+      font-size: 1.1rem;
+      margin: 10px 0 0;
+    }
+
+    .data-message {
+      grid-column: 1 / -1;
+      text-align: center;
     }
 
     /* Modal overlay, hidden by default */
@@ -153,19 +142,12 @@
     <h1>Player Profiles</h1>
     <nav>
       <a href="https://sabaody-showdown.github.io/league/">Homepage</a>
-      <a href="https://sabaody-showdown.github.io/league/Profiles/">Player Profiles</a>
+      <a href="https://sabaody-showdown.github.io/league/Articles/">Articles</a>
       <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>
       <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank">YouTube</a>
       <a href="https://x.com/sabaodyshowdown" target="_blank">Twitter</a>
     </nav>
   </header>
-
-  <div class="tabs">
-    <button class="tab-button active" data-division="Division 1">Division 1</button>
-    <button class="tab-button" data-division="Division 2">Division 2</button>
-    <button class="tab-button" data-division="Division 3">Division 3</button>
-    <button class="tab-button" data-division="Division 4">Division 4</button>
-  </div>
 
   <div id="profiles-container" class="profiles-grid"></div>
 
@@ -176,51 +158,60 @@
   </div>
 
   <script>
-    const divisions = ["Division 1", "Division 2", "Division 3", "Division 4"];
     const profilesContainer = document.getElementById("profiles-container");
-    const playersPerDivision = 8; // adjust if needed
 
-    // Modal elements
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("modalImg");
     const closeBtn = document.querySelector(".close");
 
-    function loadDivision(division) {
-      profilesContainer.innerHTML = "";
-      for (let i = 1; i <= playersPerDivision; i++) {
-        const card = document.createElement("div");
-        card.className = "profile-card";
+    async function loadPlayers() {
+      try {
+        const response = await fetch("./players.json");
+        if (!response.ok) {
+          throw new Error(`Unable to load player profiles (${response.status}).`);
+        }
+        const data = await response.json();
+        if (!Array.isArray(data.players)) {
+          throw new Error("Player profile data must contain a players array.");
+        }
 
-        const img = document.createElement("img");
-        img.src = `./${division}/Player${i}.jpg`; // relative path inside Profiles folder
-        img.alt = `${division} Player ${i}`;
+        if (!data.players.length) {
+          profilesContainer.textContent = "Player profiles will be added soon.";
+          return;
+        }
 
-        img.onclick = () => openModal(img.src);
+        data.players.forEach(player => {
+          const card = document.createElement("div");
+          card.className = "profile-card";
 
-        card.appendChild(img);
-        profilesContainer.appendChild(card);
+          const img = document.createElement("img");
+          img.src = player.image;
+          img.alt = `${player.name} profile`;
+
+          img.onclick = () => openModal(img.src);
+
+          const name = document.createElement("h2");
+          name.textContent = player.name;
+
+          card.appendChild(img);
+          card.appendChild(name);
+          profilesContainer.appendChild(card);
+        });
+      } catch (error) {
+        console.error(error);
+        profilesContainer.textContent = "Player profiles could not be loaded. Please try again later.";
       }
     }
 
     function openModal(src) {
-      modal.style.display = "flex"; // show modal as flex
+      modal.style.display = "flex";
       modalImg.src = src;
     }
 
     closeBtn.onclick = () => modal.style.display = "none";
     window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
-    // Tab switching
-    document.querySelectorAll(".tab-button").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        loadDivision(btn.dataset.division);
-      });
-    });
-
-    // Load Division 1 by default
-    loadDivision(divisions[0]);
+    loadPlayers();
   </script>
 </body>
 </html>

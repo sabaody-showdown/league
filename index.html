@@ -68,23 +68,18 @@
     }
 
     .standings-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 20px;
+      overflow-x: auto;
     }
 
     .fixtures-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 20px;
+      overflow-x: auto;
     }
 
     .standings-card {
       background: var(--card-bg);
       border: 1px solid var(--accent-light-blue);
       border-radius: 8px;
-      padding: 10px;
-      text-align: center;
+      padding: 16px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
@@ -92,19 +87,39 @@
       background: var(--card-bg);
       border: 1px solid var(--accent-light-blue);
       border-radius: 8px;
-      padding: 10px;
-      text-align: center;
+      padding: 16px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .standings-card img {
+    .league-table {
       width: 100%;
-      border-radius: 4px;
+      border-collapse: collapse;
+      background: var(--card-bg);
     }
 
-    .fixtures-card img {
-      width: 100%;
-      border-radius: 4px;
+    .league-table th,
+    .league-table td {
+      padding: 10px;
+      border-bottom: 1px solid var(--bg-light);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .league-table th {
+      color: var(--accent-blue);
+    }
+
+    .week-label {
+      margin-top: 0;
+      font-weight: bold;
+    }
+
+    .data-message {
+      margin: 0;
+    }
+
+    .data-message.error {
+      color: #9b1c1c;
     }
 
     footer {
@@ -130,7 +145,7 @@
     <h1>Sabaody Showdown</h1>
     <nav>
       <a href="https://sabaody-showdown.github.io/league/">Homepage</a>
-      <a href="https://sabaody-showdown.github.io/league/Profiles/">Player Profiles</a>
+      <a href="https://sabaody-showdown.github.io/league/Articles/">Articles</a>
       <a href="https://www.twitch.tv/sabaodyshowdown" target="_blank">Twitch</a>
       <a href="https://www.youtube.com/@sabaodyshowdown?sub_confirmation=1" target="_blank">YouTube</a>
       <a href="https://x.com/sabaodyshowdown" target="_blank">Twitter</a>
@@ -141,7 +156,7 @@
     <h2>About Us</h2>
     <p>
       Welcome to the <strong>Sabaody Showdown</strong> — a competitive One Piece Trading Card Game league
-      featuring some of the best players in the european scene. We host nine matches a week,
+      featuring players from across Europe. We host weekly matches,
       streamed live on Twitch and archived on YouTube with top-tier commentary.
     </p>
   </section>
@@ -149,9 +164,8 @@
   <section>
     <h2>League Format</h2>
     <p>
-      This season features <strong>4 divisions of 8 players</strong> each. Players face off in weekly matches,
-      vying for a spot in the upper echelons. They also win a sealed box, and the top 2 players in each division swap places
-      with the two that placed lower on the division immediatley higher.
+      Sabaody Showdown is one unified league. Each player is scheduled for
+      <strong>two matches per week</strong>, and results contribute to a single overall standings table.
     </p>
   </section>
 
@@ -165,13 +179,15 @@
     </p>
   </section>
 
-  <section>
+  <section hidden>
     <h2>Latest League Standings</h2>
+    <p id="standings-week" class="week-label"></p>
     <div id="standings-container" class="standings-grid"></div>
   </section>
 
-  <section>
+  <section hidden>
     <h2>Latest League Fixtures</h2>
+    <p id="fixtures-week" class="week-label"></p>
     <div id="fixtures-container" class="fixtures-grid"></div>
   </section>
 
@@ -192,59 +208,140 @@
   </footer>
 
   <script>
+    async function loadLatestWeekData(latestWeekPath, dataFile) {
+      const weekResponse = await fetch(latestWeekPath);
+      if (!weekResponse.ok) {
+        throw new Error(`Unable to load ${latestWeekPath} (${weekResponse.status}).`);
+      }
+
+      const week = (await weekResponse.text()).trim();
+      if (!/^\d+$/.test(week) || Number(week) < 1) {
+        throw new Error(`Invalid latest week value in ${latestWeekPath}.`);
+      }
+
+      const dataPath = `${latestWeekPath.substring(0, latestWeekPath.lastIndexOf('/') + 1)}Week ${week}/${dataFile}`;
+      const dataResponse = await fetch(dataPath);
+      if (!dataResponse.ok) {
+        throw new Error(`Unable to load ${dataPath} (${dataResponse.status}).`);
+      }
+
+      const data = await dataResponse.json();
+      if (Number(data.week) !== Number(week)) {
+        throw new Error(`Week in ${dataPath} does not match its latest-week pointer.`);
+      }
+      return { week, data };
+    }
+
+    function addTable(container, columns, rows, emptyMessage) {
+      if (!rows.length) {
+        const message = document.createElement('p');
+        message.className = 'data-message';
+        message.textContent = emptyMessage;
+        container.appendChild(message);
+        return;
+      }
+
+      const table = document.createElement('table');
+      table.className = 'league-table';
+      const thead = table.createTHead();
+      const headerRow = thead.insertRow();
+      columns.forEach(column => {
+        const heading = document.createElement('th');
+        heading.scope = 'col';
+        heading.textContent = column.label;
+        headerRow.appendChild(heading);
+      });
+
+      const tbody = table.createTBody();
+      rows.forEach(row => {
+        const tableRow = tbody.insertRow();
+        columns.forEach(column => {
+          const cell = tableRow.insertCell();
+          const value = column.value(row);
+          if (column.link && value) {
+            const link = document.createElement('a');
+            link.href = value;
+            link.textContent = 'Watch';
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            cell.appendChild(link);
+          } else {
+            cell.textContent = value ?? '';
+          }
+        });
+      });
+      container.appendChild(table);
+    }
+
+    function showLoadError(containerId, error) {
+      console.error(error);
+      const message = document.createElement('p');
+      message.className = 'data-message error';
+      message.textContent = 'League data could not be loaded. Please try again later.';
+      document.getElementById(containerId).replaceChildren(message);
+    }
+
     async function loadStandings() {
       try {
-        const res = await fetch('LeagueStandings/latest_week.txt');
-        const weekNumber = await res.text();
-        const weekFolder = `LeagueStandings/Week ${weekNumber.trim()}`;
+        const { week, data } = await loadLatestWeekData('LeagueStandings/latest_week.txt', 'standings.json');
+        if (!Array.isArray(data.standings)) {
+          throw new Error('Standings data must contain a standings array.');
+        }
 
-        const divisions = [
-          "Division 1.png",
-          "Division 2.png",
-          "Division 3.png",
-          "Division 4.png"
-        ];
-
-        const container = document.getElementById('standings-container');
-        divisions.forEach(div => {
-          const img = document.createElement('img');
-          img.src = `${weekFolder}/${div}`;
-          img.alt = div.replace('.png', '') + " standings";
-          const card = document.createElement('div');
-          card.className = 'standings-card';
-          card.appendChild(img);
-          container.appendChild(card);
-        });
-      } catch (err) {
-        console.error("Error loading standings:", err);
+        document.getElementById('standings-week').textContent = `Week ${week}`;
+        addTable(
+          document.getElementById('standings-container'),
+          [
+            { label: 'Rank', value: row => row.rank },
+            { label: 'Player', value: row => row.player },
+            { label: 'Played', value: row => row.matchesPlayed },
+            { label: 'Wins', value: row => row.wins },
+            { label: 'Losses', value: row => row.losses },
+            { label: 'Points', value: row => row.points },
+            { label: 'Win %', value: row => row.winPercentage == null ? '' : `${row.winPercentage}%` }
+          ],
+          data.standings,
+          'Standings have not been published for this week yet.'
+        );
+      } catch (error) {
+        showLoadError('standings-container', error);
       }
     }
 
     async function loadFixtures() {
       try {
-        const res = await fetch('WeeklyFixtures/latest_week.txt');
-        const weekNumber = await res.text();
-        const weekFolder = `WeeklyFixtures/Week ${weekNumber.trim()}`;
+        const { week, data } = await loadLatestWeekData('WeeklyFixtures/latest_week.txt', 'fixtures.json');
+        if (!Array.isArray(data.fixtures)) {
+          throw new Error('Fixtures data must contain a fixtures array.');
+        }
 
-        const divisions = [
-          "Division 1.png",
-          "Division 2.png",
-          "Division 3.png",
-          "Division 4.png"
-        ];
-
-        const container = document.getElementById('fixtures-container');
-        divisions.forEach(div => {
-          const img = document.createElement('img');
-          img.src = `${weekFolder}/${div}`;
-          img.alt = div.replace('.png', '') + " fixtures";
-          const card = document.createElement('div');
-          card.className = 'fixtures-card';
-          card.appendChild(img);
-          container.appendChild(card);
-        });
-      } catch (err) {
-        console.error("Error loading fixtures:", err);
+        document.getElementById('fixtures-week').textContent = `Week ${week}`;
+        addTable(
+          document.getElementById('fixtures-container'),
+          [
+            { label: 'Match', value: row => row.matchNumber },
+            { label: 'Player', value: row => row.player },
+            { label: 'Opponent', value: row => row.opponent },
+            { label: 'Date / time', value: row => row.scheduledAt },
+            { label: 'Result', value: row => row.result },
+            {
+              label: 'VOD',
+              value: row => {
+                if (!row.vodUrl) return '';
+                try {
+                  return new URL(row.vodUrl).protocol === 'https:' ? row.vodUrl : '';
+                } catch {
+                  return '';
+                }
+              },
+              link: true
+            }
+          ],
+          data.fixtures,
+          'Fixtures have not been published for this week yet.'
+        );
+      } catch (error) {
+        showLoadError('fixtures-container', error);
       }
     }
 
