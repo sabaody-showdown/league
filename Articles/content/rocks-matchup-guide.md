@@ -48,7 +48,7 @@ Secret Rocks is our boss monster. It’s a huge body that also lets us go super 
 
 There are other interesting combinations to play out with rocks, such as Linlin \+ Gloriosa, but in general, you want to prioritise newgate and shiki above all else. 
 
-####**Ideal curve going first**
+### **Ideal curve going first**
 
 **3 DON:** Kyo \+ Swing 6k with Leader
 
@@ -250,7 +250,7 @@ From this point onwards, the goal is to drain their resources, and set up a race
 
 As extra advice here, there might be some tough choices to make with Kyo, once they play out Loki. Normally, it’s okay to let him go, and only defend him if you intend to play a 4 cost next turn, and you cannot afford for it to be loki’d. If they spend their mid game playing Gum-Gum Kong gun, they are giving us more time for the Secret Rocks plays, and they cannot kill Shiki, so no need to keep Kyo around. 
 
-## **Elbaph Luffy matchup
+## Elbaph Luffy matchup
 
 > Note: We are still working on this section, expect an update next week
    

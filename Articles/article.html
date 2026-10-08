@@ -102,18 +102,17 @@
       padding-left: 20px;
     }
 
-    .table-of-contents .toc-level-3 {
-      margin-left: 20px;
-    }
-
-    .table-of-contents .toc-level-4 {
-      margin-left: 40px;
-    }
+    .table-of-contents .toc-level-3 { margin-left: 16px; }
+    .table-of-contents .toc-level-4 { margin-left: 32px; }
+    .table-of-contents .toc-level-5 { margin-left: 48px; }
+    .table-of-contents .toc-level-6 { margin-left: 64px; }
 
     .article-content h1,
     .article-content h2,
     .article-content h3,
-    .article-content h4 {
+    .article-content h4,
+    .article-content h5,
+    .article-content h6 {
       scroll-margin-top: 20px;
       line-height: 1.35;
     }
@@ -303,6 +302,7 @@
       const contentsList = document.getElementById("table-of-contents-list");
       const usedSlugs = new Map();
       const headingItems = [];
+      const headingPattern = /^(#{1,6})(?:\s+|(?=\*\*))(.*)$/;
       let index = 0;
 
       while (index < lines.length) {
@@ -312,7 +312,7 @@
           continue;
         }
 
-        const heading = line.match(/^(#{1,6})\s+(.*)$/);
+        const heading = line.match(headingPattern);
         if (heading) {
           const level = heading[1].length;
           const title = heading[2].trim();
@@ -324,7 +324,7 @@
           element.id = headingSlug(title, usedSlugs);
           appendInline(element, title, references);
           article.appendChild(element);
-          if (level >= 2 && level <= 4) {
+          if (level >= 2) {
             headingItems.push({ title, id: element.id, level });
           }
           index += 1;
@@ -349,7 +349,7 @@
 
         const paragraphLines = [];
         while (index < lines.length && lines[index].trim() &&
-          !/^(#{1,6})\s+/.test(lines[index]) &&
+          !headingPattern.test(lines[index]) &&
           !/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[index]) &&
           !definition.test(lines[index])) {
           paragraphLines.push(lines[index].trim());
