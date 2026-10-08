@@ -6,7 +6,7 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 **Cards usage** 
 
-**Streussen** is cheap and flexible  card selection, and helps fill gaps on curve. It is ideal to see him in the early turns to make sure we find the missing pieces of our curve, but also does work clearing weenies vs Enel or Mihawk (RIP).
+**Streusen** is cheap and flexible  card selection, and helps fill gaps on curve. It is ideal to see him in the early turns to make sure we find the missing pieces of our curve, but also does work clearing weenies vs Enel or Mihawk (RIP).
 
 **Marlon** is basically our premium play on 3 DON. It lets us trash either of our 0 cost events for leader ability, and then immediately recover it, deploying pressure while growing our hand size at little to no cost.
 
@@ -30,13 +30,13 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 **There's no Authority** is most of the time a 2k counter, but in some matchups, piling up multiple in hand will turn a bad position into an easy win. It works in both our Leader and the Secret Rocks, so keep an eye out for it as a way to cheat the race. 
 
-**Rocks pirates** follows the same pattern, in most games, it’s a natural 2k counter, but in other matchups just completely turns the tempo around. Being able to deal with 6 cost bodies sounds meager compared to Gloriosa, but when facing Kaido or RG Luffy, forcing them to waste a turn re-playing King or SEC Luffy can buy us enough time to push them out of the game, specially if we can repeat the play with a sizeable board at the ready. 
+**Rocks pirates** follows the same pattern, in most games, it’s a natural 2k counter, but in other matchups just completely turns the tempo around. Being able to deal with 6 cost bodies sounds meager compared to Gloriosa, but when facing Kaido or RG Luffy, forcing them to waste a turn re-playing King or SEC Luffy can buy us enough time to push them out of the game, especially if we can repeat the play with a sizeable board at the ready.
 
 Secret Rocks is our boss monster. It’s a huge body that also lets us go super wide. Always plan for him when you defend (or let go) of your board. Letting us play 2 more bodies with a total of 9 cost is great, but it means we cannot have more than 3 real bodies by the time we play him, or instead we will waste resources.  
 
 **Jinbe** is our best option for non Rocks pirates. It’s a huge body with rush that nets us card advantage and also pushes a 7 cost or less back to our opponent’s hand. Can either be the best finisher, or a backbreaking tempo play, when contesting the board.
 
-### **Ideal curve going going second**
+### **Ideal curve going second**
 
 **4 DON:** Any 4 cost character: Captain John, Wang Zhi or Gloriosa depending on the match up
 
@@ -72,11 +72,11 @@ Not many of us will get the chance to play a relevant tournament before the Miha
 
 ![][image1]
 
-The flex slots for the list are Streuse and Buckin, but you should not run less than 4 total. I prefer having more 1k counters available, so Stussy took priority in my lists. You can also cut Captain John down to 3 copies, or get rid of the Usopp event, but the combo does come up relatively often in the current meta. 
+The flex slots for the list are Streusen and Buckin, but you should not run less than 4 total. I prefer having more 1k counters available, so Stussy took priority in my lists. You can also cut Captain John down to 3 copies, or get rid of the Usopp event, but the combo does come up relatively often in the current meta.
 
-We are playing the full 4 copies of Captain John because the endgame does rely heavily on seeing him, and early game, we might need to either trash him for leader, or let him go after it;s been rested or has attacked. It is also very useful if we can develop him on 4 DON vs either Robin or Mihawk, to grant us 1k extra counter for each swing, or force them to waste the turn by committing to an 8 swing. 
+We are playing the full 4 copies of Captain John because the endgame does rely heavily on seeing him, and early game, we might need to either trash him for leader, or let him go after it's been rested or has attacked. It is also very useful if we can develop him on 4 DON vs either Robin or Mihawk, to grant us 1k extra counter for each swing, or force them to waste the turn by committing to an 8 swing.
 
-Only running one Streusen because it effectively compacts the deck, so there is very little cost to running him. Enel is not as prevalent, and while it does help kill weenies vs Mihawk, Wangzhi will cover the removal in the early game, so we’re just playing it as a nice card to see, but is not key to the gameplan. He is also the easiest card to replace in the list, if you want to diverge, start from here. 
+Only running one Streusen because it effectively compacts the deck, so there is very little cost to running him. Enel is not as prevalent, and while it does help kill weenies vs Mihawk, Wang Zhi will cover the removal in the early game, so we’re just playing it as a nice card to see, but is not key to the gameplan. He is also the easiest card to replace in the list, if you want to diverge, start from here.
 
 Before we talk about why there is a single Usopp event in the list, we need to go over the maths of it. It looks like 1 out of 50 cards is a very low chance to hit it for leader ability, but considering an average of 8 turns before the end of the game, this compounds greatly. With some concessions to simplify the calculation, the probability of whiffing comes down to the following, based on the number of non rocks cards:
 
@@ -90,11 +90,11 @@ We decided to stick to a single copy, since the chances are lower, but also give
 
 ### **The world after banlist**
 
-The departure of Mihawk opens the gate to many archetypes to pop back into the meta, and removes our need to run a playset of Wangzhi. This is great, but can also lead us in different directions. Chances are the mirror and Enel will start off as the main decks to beat, so we can take different directions depending on who we want to target.
+The departure of Mihawk opens the gate to many archetypes to pop back into the meta, and removes our need to run a playset of Wang Zhi. This is great, but can also lead us in different directions. Chances are the mirror and Enel will start off as the main decks to beat, so we can take different directions depending on who we want to target.
 
 ![][image2]
 
-This first list is great for the mirror, but will require us to play a bit more cleanly against Enel . Jinbe does a lot of work in the mirror, but means we do not get to play with 100% Rocks cards, and this could backfire on grinder matchups, so be careful. 
+This first list is great for the mirror, but will require us to play a bit more cleanly against Enel. Jinbe does a lot of work in the mirror, but means we do not get to play with 100% Rocks cards, and this could backfire on grinder matchups, so be careful.
 
 ![][image3]
 
@@ -107,26 +107,26 @@ Finally, this list is built to leverage Streusen a bit more, and make sure we fi
 As you can see, plenty of options for the decklist have opened up, and as the formats develop, you might want to try some other options yourself. So let’s talk about the parts of the list that can be moved around:
 
 - **Streusen** is the easiest card to cut, he helps a lot, but never plays a defining role. Just keep in mind that when cutting him, you might also want to need to up the count of your 2 ofs.   
-- **Buckin i**s a necessary evil, because it’s the only 1k we are allowed to run without risking our leader ability hit rate. Run 2 to 4 copies. If the list feels too bricky, just up the count.  
+- **Buckin** is a necessary evil, because it’s the only 1k we are allowed to run without risking our leader ability hit rate. Run 2 to 4 copies. If the list feels too bricky, just up the count.
 - **WanZhi** is not on the list right now, but if Enel becomes more prominent, it might need to make a comeback  
 - **Jinbe** is mostly here for Mirror and the Rosinante matchup, but if the latter is not a key part of the meta, we can probably get away with not running him. 
 
 As for what other cards we could be running, depending on the meta, right now there are two main suspects:
 
 - **Ganzui** is the Rocks pirate we should keep an eye on. He helps a lot against the Black Luffy matchup. Becoming a 6k will force them to choose on whether to develop board or push life, and being a sticky body means they will always need to account for their swing. If Bluffy becomes popular, we will want to slot a couple of copies.   
-- **Gravity blade**  is always a blue card to consider running in mid game heavy metas. Rosinante is all the rage now that Mihawk is gone, and GUffy is on a break, and it is not an easy matchup. If it grows popular and we need some help, this might take our non-rocks spot
+- **Gravity Blade Raging** is always a blue card to consider running in mid game heavy metas. Rosinante is all the rage now that Mihawk is gone, and GUffy is on a break, and it is not an easy matchup. If it grows popular and we need some help, this might take our non-rocks spot
 
 ## **Mihawk Matchup**
 
-This matchup is defined by their mid game, and stopping them from going double 6c Law is going to improve our chances severely. Respecting Mihawk is the main reason to play Wangzhi as a 4 drop, while also being obviously helpful into Enel. He single handedly makes our going first game a lot more reliable in the matchup. If possible going second would still give us a better chance of winning
+This matchup is defined by their mid game, and stopping them from going double 6c Law is going to improve our chances severely. Respecting Mihawk is the main reason to play Wang Zhi as a 4 drop, while also being obviously helpful into Enel. He single handedly makes our going first game a lot more reliable in the matchup. If possible going second would still give us a better chance of winning
 
 ### **Going first**
 
 **1 DON:** Pass or play Streusen if you have one available
 
-**3 DON:** Play Kyo and Swing 6\. Play the Kyo first, to offer the chance for them to trigger a Luna on them. The matchup gets better if they don't see multiple lunas, so any chance to let them trigger it is great in the early game. 
+**3 DON:** Play Kyo and Swing 6\. Play the Kyo first, to offer the chance for them to trigger a Luna on them. The matchup gets better if they don't see multiple Lunas, so any chance to let them trigger it is great in the early game.
 
-**5 DON:** Swing 6k with Leader, and then play Wangzhi to remove their 1c characters. This stops them from playing OP13 Law on curve, and means they will instead have to simply develop a 5c character. If all of their weenies are rested (due to You are my Samurai), you can instead swing into them and drop a Linlin to get defense and a bigger body, but it is fairly unlikely.
+**5 DON:** Swing 6k with Leader, and then play Wang Zhi to remove their 1c characters. This stops them from playing OP13 Law on curve, and means they will instead have to simply develop a 5c character. If all of their weenies are rested (due to You Are My Samurai), you can instead swing into them and drop a Linlin to get defense and a bigger body, but it is fairly unlikely.
 
 **7 DON:** Play Shiki and leave it active. Next best play is Newgate, letting you swing, but it is fairly weaker. 
 
@@ -152,7 +152,7 @@ Both Yasopp and Oden negate our blockers, so it's important not to count on them
 
 They will hit 12k into John, so we shiki \+ double 2k, and counter all the 6k hits into John. It is fine to let him die to the last attack as long as Kyo survives. This means you will keep your Rocks alive to swing into shanks. 
 
-From this point, the ideal situation is to chain a second SEC Rocks into Shik (and possibly Kyo), kill the Shanks, and survive the following turn on 1 or 2 life. This will be enough of a buffer to outlast 2 Electrical Lunas, and once their characters are gone, we can clear the game in 2 turns without much trouble. 
+From this point, the ideal situation is to chain a second SEC Rocks into Shiki (and possibly Kyo), kill the Shanks, and survive the following turn on 1 or 2 life. This will be enough of a buffer to outlast 2 Electrical Lunas, and once their characters are gone, we can clear the game in 2 turns without much trouble.
 
 ## **Robin matchup**
 
@@ -192,7 +192,7 @@ You will want to develop SEC Rocks on 10, and then contest board while chipping 
 
 From this moment, we are again just playing for board, and navigating around their sweet general turns. We want to play the long game here, and contest board while we chip away at life. 
 
-One of the most back breaking plays is to remove their only Linlin. If they have rested it, a second shiki all but guarantees removing it (spending two cards from hand). And even if they follow it up with sweet generals, their small bodies will not be enough to contest ours on the clap back.
+One of the most backbreaking plays is to remove their only Linlin. If they have rested it, a second shiki all but guarantees removing it (spending two cards from hand). And even if they follow it up with sweet generals, their small bodies will not be enough to contest ours on the clap back.
 
 Some Robins will actively play to deck you out, and refuse to expose their board to attacks, beyond 1 or 2 bodies that are susceptible to gloriosa. Keep calm, but be sure to not let them get too healthy either, and try to represent enough aggressiveness to stop them from tapping out, and instead they are forced to choose between Linlin and Giant. 
 
@@ -220,7 +220,7 @@ Once we have a dominant board, Sabo will not be able to break our defenses unles
 
 Ground death is their best way to beat our captain John defensive line, but this can be bypassed if we develop a second copy. 
 
-They can also try and swing the tempo by killing our board with Gum-Gum Kong Gun. Of course Kyo is a key way to stop them from even trying, so keep one at the ready for turns when the gun would disrupt the tempo.
+They can also try and swing the tempo by killing our board with Gum-Gum Kong Gun. Of course Kyo is a key way to stop them from even trying, so keep one at the ready for turns when the Gun would disrupt the tempo.
 
 Their gameplan is to end the game before we stabilise, so when using Kaido, be sure to show them counter cards, to avoid giving them any info about our bricks in hand. .
 
@@ -248,7 +248,7 @@ From this point onwards, the goal is to drain their resources, and set up a race
 
 **10 DON:** Secret Rocks into Gloriosa \+ Wang or Kaido. Setting up a wall while Newgate and Shiki are on board will be enough to become the aggressor here. Linlin can also be a fine option to accompany the blocker with. 
 
-As extra advice here, there might be some tough choices to make with Kyo, once they play out Loki. Normally, it’s okay to let him go, and only defend him if you intend to play a 4 cost next turn, and you cannot afford for it to be loki’d. If they spend their mid game playing Gum-Gum Kong gun, they are giving us more time for the Secret Rocks plays, and they cannot kill Shiki, so no need to keep Kyo around. 
+As extra advice here, there might be some tough choices to make with Kyo, once they play out Loki. Normally, it’s okay to let him go, and only defend him if you intend to play a 4 cost next turn, and you cannot afford for it to be loki’d. If they spend their mid game playing Gum-Gum Kong Gun, they are giving us more time for the Secret Rocks plays, and they cannot kill Shiki, so no need to keep Kyo around.
 
 ## Elbaph Luffy matchup
 
@@ -266,23 +266,23 @@ Unlike with Sabo, Luffy has a lot of ways to wall up on the lategame, so a lot o
 
 This matchup does change quite a bit depending on the version, but the main assumption for now is the fact they are running a bunch of Dogs (Holy). This card is a 4k power 3k that brings double attack to both himself and all the Ohms, while simultaneously making those same characters 6k on defense. Combined with the army of pawns (1c 2k bodies that replace themselves), and its leader ability, it does pressure a lot while leveraging his events to remove whatever is causing him trouble.
 
-These lists also pile somewhat heavily on ST-10 Trafalgar Law (and Sometimes OP17 X-Drake) to drain their opponents hand size at random, making it hard to pivot the game, especially if our key card gets ripped off our hand. 
+These lists also pile somewhat heavily on ST-10 Trafalgar Law (and sometimes OP17 X.Drake) to drain their opponents hand size at random, making it hard to pivot the game, especially if our key card gets ripped off our hand.
 
 This is also one of the only matchups where we would rather go first, since their aggressiveness gets miles worse when they get to swing first (and use their leader ability earlier). 
 
-Gloriosa is definitely the card we want to see in our mulligans, as it’s a clean response to the block that will either force them to use a removal spell, or will double down as a buffer for a swing. If given the option, just block immediately here, because not doing so could backfire spectacularly if they Thor us for a bigger follow up swing. Of course if WangZhi is on the list, he can turn the game around if dropped mid game, so keep him in mind. 
+Gloriosa is definitely the card we want to see in our mulligans, as it’s a clean response to the block that will either force them to use a removal spell, or will double down as a buffer for a swing. If given the option, just block immediately here, because not doing so could backfire spectacularly if they Thor us for a bigger follow up swing. Of course if Wang Zhi is on the list, he can turn the game around if dropped mid game, so keep him in mind.
 
-Enel is an extremely flexible deck, but it lacks real card advantage, beyond its pawns and Rip law. Fortunately, that is our strong suit, so if we can bring the game to go longer while we keep somewhat healthy, things will turn in our favor. 
+Enel is an extremely flexible deck, but it lacks real card advantage, beyond its pawns and RP Law. Fortunately, that is our strong suit, so if we can bring the game to go longer while we keep somewhat healthy, things will turn in our favor.
 
 However, it is a very technical matchup, and there is no set desired curve, we just want to be reactive and leverage our extra resources, while we avoid dying to their crafty swings.
 
 Our goal here is to always remove their 5k+ bodies, prioritising that over swinging face, forcing them to run on lower resources, and then stopping their 5 to 7 swings when we can afford to. Streusen will do some work on the clap back, but generally, it might not be worth swinging at the weenies, unless they have already used multiple shuras, and we can remove all of them in the same turn.
 
-Weirdly enough, in this matchup, Newgate is fairly bad, unless we know they are running out of Gamma Knife. He is a prime target for the dreaded gamma thor combo, and even if it has replaced itself, the tempo swing of him dying is horrible, so only drop him on a curve if we have enough kyo security to not fall into this trap. 
+Weirdly enough, in this matchup, Newgate is fairly bad, unless we know they are running out of Gamma Knife. He is a prime target for the dreaded Gamma Thor combo, and even if it has replaced itself, the tempo swing of him dying is horrible, so only drop him on a curve if we have enough kyo security to not fall into this trap.
 
 His long term plan of dropping SEC Enels is less common these days, but is also not great in the matchup, because of our Stussys freezing a base cost 6 (those Varies are all but useless). 
 
-Shiki is the best card in the matchup. Shocking, right? His huge statline makes it awkward to remove through El Thor, and even in combat, can be a pain to deal with after a Gamma knife. (since his ability reduces a swing by 3k, they need to commit a bit harder)l. He is also great at dealing with the SEC Enel, given it immediately turns it down to a 7k, and swings 9 at it, draining our opponents hand size by 2 at least (or one \+ mama).   
+Shiki is the best card in the matchup. Shocking, right? His huge statline makes it awkward to remove through El Thor, and even in combat, can be a pain to deal with after a Gamma Knife. (since his ability reduces a swing by 3k, they need to commit a bit harder). He is also great at dealing with the SEC Enel, given it immediately turns it down to a 7k, and swings 9 at it, draining our opponents hand size by 2 at least (or one \+ mama).
 Enel is very good at surprise lethals, so always keep into account how many El Thors they have left, and be aware that your 10c bodies might not even reach the ground. Feel free to counter with those rocks early, since it’s all but impossible to play more than one in the game. 
 
 The general goal here is to arrive at 10 DON healthy enough to drop a Rocks, and clear their board. Then we don’t die to a greedy lethal, and we can set up a 1 or two turn clock to kill them while they struggle to develop.
@@ -305,7 +305,7 @@ Missing your curve is a huge problem on the mirror match, and can get severely p
 
 ### **Going first**
 
-The ideal hand you're looking for here is basically Kyo \+ Linlin. If running Streusen, he will help you get closer to those two, so value him highly .Of course a shiki to compliment them is great, but you should mulligan if you don’t see 2 out of the three, and some decent backup play for the turn you’re missing. 
+The ideal hand you're looking for here is basically Kyo \+ Linlin. If running Streusen, he will help you get closer to those two, so value him highly. Of course a Shiki to complement them is great, but you should mulligan if you don’t see 2 out of the three, and some decent backup play for the turn you’re missing.
 
 - **3 DON:**  Play the Kyo and swing 6k your Leader. Kyo is a key protection piece here when going first, so unless you’re missing Linlin, trash two cards to protect him from Gloriosa.   
 - **5 DON:** If Kyo is still at the ready, develop  Linlin. She’s your best play this turn, but you cannot afford to get her Gloriosa’d on your opponent’s 6 turn. If you did not have kyo on 2, just develop Captain John or another 2 cost. IF you run him, Ganzui is not bad here either, as it can survive Gloriosa.   
