@@ -6,11 +6,19 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 **Cards usage** 
 
+![Streusen](images/cards/OP17-050-Streusen.jpg)
+![Don Marlon](images/cards/OP17-052-Don-Marlon.jpg)
+![Miss Buckingham Stussy](images/cards/OP17-054.jpg)
+
 **Streusen** is cheap and flexible  card selection, and helps fill gaps on curve. It is ideal to see him in the early turns to make sure we find the missing pieces of our curve, but also does work clearing weenies vs Enel or Mihawk (RIP).
 
 **Marlon** is basically our premium play on 3 DON. It lets us trash either of our 0 cost events for leader ability, and then immediately recover it, deploying pressure while growing our hand size at little to no cost.
 
 **Stussy** excels as a late game play, once we have a strong board, since it lets us negate 2 of our opponents swings, and then becomes a pseudo blocker for a third one. She is also great when deployed next to Newgate on our SEC Rocks turn, totalling to 9 DON and cheating the race. 
+
+![Ganzui](images/cards/OP17-043-Ganzui.jpg)
+![Kaido](images/cards/OP17-042-Kaido.jpg)
+![Edward Newgate](images/cards/OP17-040.jpg)
 
 **Ganzui** is our tech as a concession for Elbaph Luffy. Once Mihawk is out of the picture, chances are Luffy will be our worst enemy, and this buffing leader forces them to choose between swinging or playing on curve. Right after that, it  becomes a 7k swinger that is almost impossible to remove.
 
@@ -18,17 +26,30 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 **Newgate** is the backbone of the deck when going second. He turns any card into a 3k counter for swings at our leader, but can also push aggressive lines if our opponent takes the early lives greedily. He also completely overloads your lethal options, and if there are 2 on board, you can easily push multiple 11 swings in a single turn.
 
+![Captain John](images/cards/OP17-044.jpg)
+![Kyo](images/cards/OP17-045.jpg)
+![Gloriosa](images/cards/OP17-046.jpg)
+
 **Captain John** is a very reliable way to protect our board. Against decks with the ability to reduce power, he acts as a 6k baseline, making sure our key bodies can survive the turn. Of course it’s half the combo with the Usopp event, but this will be less important once Mihawk ban comes into effect, as we will likely abandon the EB02 Event.
 
 **Kyo** is just premium removal protection on a body that replaces itself. It’s pretty much pointless on matchups without access to removal, but it will still let us push through some easy swings, or help dig deeper in turns one and two. 
 
 **Gloriosa** is the best tool we have for slowing down aggressive decks. Removing a threat and eating a swing gives us a good enough buffer to safely deploy our Newgates and Shikis later on. This is a key piece vs Sabo or BLuffy for the early game, and removing Yasopp also does wonders. Once we reach lategame, it can be used both as a defensive tool or a cheap way to remove a blocker (prime examples being yamato or borsalino) and go for a comfy lethal. . 
 
+
+![Shiki](images/cards/OP17-048.jpg)
+![Charlotte Linlin](images/cards/OP17-049.jpg)
+![There's no Authority](images/cards/OP17-055-Authority.jpg)
+
 **Shiki** is the key body of the deck. 9000 statline on a 7 cost is always reasonable, since both combat and cost based removal becomes awkward. But adding his ability to immediately challenge the board with rush and power reduction just completely shifts the rhythm of the game. He is also part of our defensive line, and gets extra points against brooks and other character restands. 
 
 **Linlin** is basically a necessity when going first. Playing a good body on 5 that turns a brick in hand into a 1k gives us incredible value, but additionally grants us powerful card advantage. Most of the time, we will draw 2, helping us follow her up with shiki, but in some cases our opponent will instead give up their resources, making the game a lot more predictable, and our Shikis all the more powerful when contesting the board. 
 
 **There's no Authority** is most of the time a 2k counter, but in some matchups, piling up multiple in hand will turn a bad position into an easy win. It works in both our Leader and the Secret Rocks, so keep an eye out for it as a way to cheat the race. 
+
+![Rocks Pirates](images/cards/OP17-056-Rocks-Pirates.jpg)
+![Rocks D. Xebec](images/cards/OP17-118-Rocks-D-Xebec.jpg)
+![Jinbe](images/cards/OP14-049-Jinbe.jpg)
 
 **Rocks pirates** follows the same pattern, in most games, it’s a natural 2k counter, but in other matchups just completely turns the tempo around. Being able to deal with 6 cost bodies sounds meager compared to Gloriosa, but when facing Kaido or RG Luffy, forcing them to waste a turn re-playing King or SEC Luffy can buy us enough time to push them out of the game, especially if we can repeat the play with a sizeable board at the ready.
 
@@ -38,7 +59,7 @@ Regardless of the matchup, your goal is to develop on a curve. It is important t
 
 ### **Ideal curve going second**
 
-**3 DON:** Kyo to cycle a card and set up removal protection
+**2 DON:** Kyo to cycle a card and set up removal protection
 
 **4 DON:** Any 4 cost character: Captain John, Wang Zhi or Gloriosa depending on the match up
 
